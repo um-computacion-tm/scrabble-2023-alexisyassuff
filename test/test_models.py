@@ -8,18 +8,41 @@ from unittest.mock import patch
 
 class TestTiles(unittest.TestCase):
     def test_tile(self):
-        tile = Tile('A', 1)
+        tile = Tile('A' and "E" and "I" and "L" and "N" and "O" and "R" and"S" and "T" and "U", 1)
         self.assertEqual(tile.letter, 'A')
         self.assertEqual(tile.value, 1)
-
-
+    def test_tile(self):
+        tile = Tile("D" and "G", 2)
+        self.assertEqual(tile.letter, "D" and "G")
+        self.assertEqual(tile.value, 2)
+    def test_tile(self):
+        tile = Tile("B" and "C" and "M" and "P", 3)
+        self.assertEqual(tile.letter,"B" and "C" and "M" and "P")
+        self.assertEqual(tile.value, 3)
+    def test_tile(self):
+        tile = Tile("F" and "H" and "V" and "Y", 4)
+        self.assertEqual(tile.letter, "F" and "H" and "V" and "Y")
+        self.assertEqual(tile.value, 4)
+    def test_tile(self):
+        tile = Tile("J" and "LL" and "Ñ" and "R" and "X" , 8)
+        self.assertEqual(tile.letter, "J" and "LL" and "Ñ" and "R" and "X")
+        self.assertEqual(tile.value, 8)
+    def test_tile(self):
+        tile = Tile("Z", 10)
+        self.assertEqual(tile.letter, "Z")
+        self.assertEqual(tile.value, 10)
+    def test_tile(self):
+        tile = Tile("Comodin", 0)
+        self.assertEqual(tile.letter, 'Comodin')
+        self.assertEqual(tile.value, 0)
+        
 class TestBagTiles(unittest.TestCase):
     @patch('random.shuffle')
     def test_bag_tiles(self, patch_shuffle):
         bag = BagTiles()
         self.assertEqual(
             len(bag.tiles),
-            5,
+            100,
         )
         self.assertEqual(
             patch_shuffle.call_count,
@@ -36,7 +59,7 @@ class TestBagTiles(unittest.TestCase):
         tiles = bag.take(2)
         self.assertEqual(
             len(bag.tiles),
-            3,
+            98,
         )
         self.assertEqual(
             len(tiles),
@@ -49,7 +72,7 @@ class TestBagTiles(unittest.TestCase):
         bag.put(put_tiles)
         self.assertEqual(
             len(bag.tiles),
-            7,
+            102,
         )
 
 
