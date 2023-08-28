@@ -62,8 +62,10 @@ class BagTiles:
     def take(self, count):
         tiles = []
         for _ in range(count):
-            tiles.append(self.tiles.pop())
+            tiles.append(self.tiles.pop()) 
         return tiles
 
-    def put(self, tiles):
-        self.tiles.extend(tiles)
+    def put(self, tiles): 
+        if Tile in tiles:       ##Verificacion de que ingresen fichas pertenecientes a las 
+               #ya sacadas
+            self.tiles.extend(tiles)
