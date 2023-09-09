@@ -1,4 +1,5 @@
 from game.cell import Cell
+
 class WordCalculator:
     def calculate_word_value(word):
         total_value = 0
