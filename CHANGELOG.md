@@ -1,35 +1,45 @@
 # Changelog
 
-## [Unreleased]
 
-## [2023-09-10]
 
-### Added
 
-- Added tests related to the Board class.
 
-## [2023-09-09]
+## [28-08-2023]
 
 ### Added
 
-- Added tests and methods for multipliers.
-- Added Scrabble-related tests to control player turns.
+- Created a method and test to verify that the player has the tiles to complete the desired word.
 
-## [2023-08-30]
-
-### Added
-
-- Added Codeclimate and CircleCI.
-
-## [2023-08-29]
+## [29-08-2023]
 
 ### Added
 
 - Created tests and functions responsible for verifying player's tiles and performing deductions when successful.
 - Descriptive message of changes.
 
-## [2023-08-28]
+## [30-08-2023]
 
 ### Added
 
-- Created a method and test to verify that the player has the tiles to complete the desired word.
+- Added Codeclimate and CircleCI.
+
+## [09-09-2023]
+
+### Added
+
+- Added tests and methods for multipliers.
+- Added Scrabble-related tests to control player turns.
+
+## [10-09-2023] 
+
+### Added
+
+- Added tests related to the Board class.
+
+## [10-09-2023]
+
+### Added
+- Implemented a new function that manages the next turn in the game.
+- Added unit tests to verify the correct functionality of the 'next_turn' method.
+  - `test_next_turn_when_player_is_not_the_first`: Ensures that after player 0, it's player 1's turn.
+  - `test_next_turn_when_player_is_last`: In a scenario with 3 players, confirms that after player 3, it's player 1's turn.
