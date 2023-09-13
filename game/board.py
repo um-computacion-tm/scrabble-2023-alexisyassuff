@@ -27,5 +27,8 @@ class Board:
                 return False
             elif vertical_position + len_word > 1:
                 return True 
+        
+    def validate_word_out_of_board(self, word, location, orientation):
+        return not self.validate_word_inside_board(word, location, orientation)
     
     

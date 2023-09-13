@@ -10,7 +10,8 @@ class ScrabbleGame:
         self.players = []
         for _ in range(players_count):
             self.players.append(Player())
-            
+        self.current_player = None  # Inicializa el jugador actual en None al principio
+
     def next_turn(self):
         if self.current_player is None:
             self.current_player = self.players[0]
