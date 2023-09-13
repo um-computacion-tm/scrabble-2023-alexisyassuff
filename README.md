@@ -2,9 +2,12 @@ Objective: Scrabble is a classic word game that challenges players to use their 
 
 
 
-### Circle CI
+### Circle CI Developer
 
 [![CircleCI](https://dl.circleci.com/status-badge/img/gh/um-computacion-tm/scrabble-2023-alexisyassuff/tree/developer.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/um-computacion-tm/scrabble-2023-alexisyassuff/tree/developer)
+
+### Circle CI Main
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/um-computacion-tm/scrabble-2023-alexisyassuff/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/um-computacion-tm/scrabble-2023-alexisyassuff/tree/main)
 
 ### Test Coverage
 
