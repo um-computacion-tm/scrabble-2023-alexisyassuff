@@ -36,10 +36,17 @@
 
 - Added tests related to the Board class.
 
-## [10-09-2023]
+## [11-09-2023]
 
 ### Added
 - Implemented a new function that manages the next turn in the game.
 - Added unit tests to verify the correct functionality of the 'next_turn' method.
   - `test_next_turn_when_player_is_not_the_first`: Ensures that after player 0, it's player 1's turn.
   - `test_next_turn_when_player_is_last`: In a scenario with 3 players, confirms that after player 3, it's player 1's turn.
+
+## [12-09-2023]
+
+### Added
+
+- Implemented the `validate_word_inside_board` method in the `Board` class to check if a word can fit on the game board. This method verifies the word's location and orientation to ensure it fits within the board boundaries.
+  
