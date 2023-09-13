@@ -10,3 +10,13 @@ class ScrabbleGame:
         self.players = []
         for _ in range(players_count):
             self.players.append(Player())
+            
+    def next_turn(self):
+        if self.current_player is None:
+            self.current_player = self.players[0]
+        else:
+            turn = self.players.index(self.current_player)
+            if turn == (len(self.players) - 1):
+                self.current_player = self.players[0]
+            else:
+                self.current_player = self.players[turn + 1]

@@ -66,6 +66,6 @@ class BagTiles:
         return tiles
 
     def put(self, tiles): 
-        if Tile in tiles:       ##Verificacion de que ingresen fichas pertenecientes a las 
-               #ya sacadas
+        if Tile in tiles:            ##Verificacion de que ingresen fichas pertenecientes a las 
+                                    #ya sacadas
             self.tiles.extend(tiles)
