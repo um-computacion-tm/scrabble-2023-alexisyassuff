@@ -58,3 +58,15 @@
 
 - Added a new method validate_word_out_of_board to validate if a word goes out of bounds on the game board, enhancing testing capabilities.
 
+## [21-09-2023]
+
+### Added
+- Added board-related unit tests to ensure proper game functionality.
+  - `test_board_is_empty` verifies that the board is empty as expected.
+  - `test_board_is_not_empty` checks that the board is not empty after adding letters.
+  - `test_place_word_empty_board_horizontal_fine` ensures the ability to place words on an empty board in the horizontal orientation.
+  - `test_place_word_empty_board_horizontal_wrong` verifies that it's not possible to place words on an empty board with incorrect placement in the horizontal orientation.
+  - `test_place_word_empty_board_vertical_fine` confirms the capability to place words on an empty board in the vertical orientation.
+  - `test_place_word_empty_board_vertical_wrong` checks that it's not possible to place words on an empty board with incorrect placement in the vertical orientation.
+  - `test_place_word_not_empty_board_horizontal_fine` ensures the ability to place words on a non-empty board in the horizontal orientation.
+
