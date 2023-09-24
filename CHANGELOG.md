@@ -70,3 +70,7 @@
   - `test_place_word_empty_board_vertical_wrong` checks that it's not possible to place words on an empty board with incorrect placement in the vertical orientation.
   - `test_place_word_not_empty_board_horizontal_fine` ensures the ability to place words on a non-empty board in the horizontal orientation.
 
+## [23-09-2023]
+
+### Added
+- Added basic Scrabble game functionality in the main.py file. Players can now enter the number of participants and start the game. A loop has been implemented to allow each player to take their turn and play their words.
