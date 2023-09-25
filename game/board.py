@@ -7,7 +7,8 @@ class Board:
             [ Cell(1, '') for _ in range(15) ]
             for _ in range(15)
         ]
-    
+        self.is_empty = True  # Inicializa el tablero como vacío
+
     def validate_word_inside_board(self, word, location, orientation):
         row, col = location
 
@@ -30,5 +31,9 @@ class Board:
         
     def validate_word_out_of_board(self, word, location, orientation):
         return not self.validate_word_inside_board(word, location, orientation)
-    
+     
+    def add_letter(self, letter, location):
+        row, col = location
+        self.grid[row][col].add_letter(letter)
+        self.is_empty = False  
     

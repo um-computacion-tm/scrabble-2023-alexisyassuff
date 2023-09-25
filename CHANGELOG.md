@@ -74,3 +74,8 @@
 
 ### Added
 - Added basic Scrabble game functionality in the main.py file. Players can now enter the number of participants and start the game. A loop has been implemented to allow each player to take their turn and play their words.
+
+## [24-09-2023]
+
+### Added
+Added to the method that performs the unit test corresponding to verifying if board is empty
