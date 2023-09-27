@@ -1,7 +1,8 @@
 import unittest
-from game.calculate_word import WordCalculator  
+from game.calculate_word import WordCalculator
 from game.cell import Cell
 from game.models import Tile
+
 
 class TestCalculateWordValue(unittest.TestCase):
     def test_simple(self):
@@ -11,7 +12,7 @@ class TestCalculateWordValue(unittest.TestCase):
             Cell(letter=Tile('S', 2)),
             Cell(letter=Tile('A', 1)),
         ]
-        value = WordCalculator.calculate_word_value(word)  
+        value = WordCalculator.calculate_word_value(word)
         self.assertEqual(value, 5)
 
     def test_with_letter_multiplier(self):
@@ -77,6 +78,7 @@ class TestCalculateWordValue(unittest.TestCase):
     #     ]
     #     value = WordCalculator.calculate_word_value(word)
     #     self.assertEqual(value, 5)
+
 
 if __name__ == '__main__':
     unittest.main()

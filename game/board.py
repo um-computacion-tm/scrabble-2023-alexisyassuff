@@ -7,8 +7,7 @@ class Board:
             [ Cell(1, '') for _ in range(15) ]
             for _ in range(15)
         ]
-        self.is_empty = True  # Inicializa el tablero como vacío
-
+        self.is_empty = True
     def validate_word_inside_board(self, word, location: tuple , orientation):
         #Define cual indice de tupla es fila y columna   [f,c]
         horizontal_position = location[0]
@@ -29,9 +28,13 @@ class Board:
         
     def validate_word_out_of_board(self, word, location, orientation):
         return not self.validate_word_inside_board(word, location, orientation)
-     
-  
-
+    
+    # def is_empty(self):
+    #     if self.grid[7][7].letter == None:
+    #         return True  
+    #     else:
+    #         return False
+            
     def validate_word_place_board(self, word, location: tuple, orientation):
         len_word = len(word)
         row = location[0]
