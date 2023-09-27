@@ -84,3 +84,9 @@ Added to the method that performs the unit test corresponding to verifying if bo
 
 ### Added
 Added a function, validate_word_place_board, to the Board class to check the board's ability to receive a word at a specific location and orientation. This feature ensures that in the horizontal orientation the words fit correctly on the board based on their length.
+
+## [27-09-2023]
+
+### Added
+- Added to the validate_palabra_place_board function, the verification of the capacity of the board to ensure that in both horizontal and vertical orientation the words fit correctly on the board according to their length.
+- Updated readme.md adding file name and file number.

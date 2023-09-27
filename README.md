@@ -17,3 +17,4 @@ Objective: Scrabble is a classic word game that challenges players to use their 
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/3edebf81da831b9f527f/maintainability)](https://codeclimate.com/github/um-computacion-tm/scrabble-2023-alexisyassuff/maintainability)
 
+Alexis Yassuff (62072)

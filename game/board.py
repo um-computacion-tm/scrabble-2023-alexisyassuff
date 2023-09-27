@@ -31,6 +31,7 @@ class Board:
         return not self.validate_word_inside_board(word, location, orientation)
      
   
+
     def validate_word_place_board(self, word, location: tuple, orientation):
         len_word = len(word)
         row = location[0]
@@ -39,6 +40,10 @@ class Board:
             return len_word +  col <= 14
         if orientation == "H":
             return len_word +  col > 14
+        if orientation == "V":
+           return len_word + row <= 14
+        if orientation == "V":
+           return len_word + row > 14
 
     
     

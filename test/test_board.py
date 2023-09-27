@@ -60,21 +60,21 @@ class TestBoard(unittest.TestCase):
         word_is_valid = board.validate_word_place_board(word, location, orientation)
         assert word_is_valid == False
 
-    # def test_place_word_empty_board_vertical_fine(self):
-    #     board = Board()
-    #     word = "Facultad"
-    #     location = (4, 7)
-    #     orientation = "V"
-    #     word_is_valid = board.validate_word_place_board(word, location, orientation)
-    #     assert word_is_valid == True
+    def test_place_word_empty_board_vertical_fine(self):
+        board = Board()
+        word = "Facultad"
+        location = (4, 7)
+        orientation = "V"
+        word_is_valid = board.validate_word_place_board(word, location, orientation)
+        assert word_is_valid == True
 
-    # def test_place_word_empty_board_vertical_wrong(self):
-    #     board = Board()
-    #     word = "Facultad"
-    #     location = (9, 4)
-    #     orientation = "V"
-    #     word_is_valid = board.validate_word_place_board(word, location, orientation)
-    #     assert word_is_valid == False
+    def test_place_word_empty_board_vertical_wrong(self):
+        board = Board()
+        word = "Facultad"
+        location = (9, 4)
+        orientation = "V"
+        word_is_valid = board.validate_word_place_board(word, location, orientation)
+        assert word_is_valid == False
 
     # def test_place_word_not_empty_board_horizontal_fine(self):
     #     board = Board()
