@@ -79,3 +79,8 @@
 
 ### Added
 Added to the method that performs the unit test corresponding to verifying if board is empty
+
+## [26-09-2023]
+
+### Added
+Added a function, validate_word_place_board, to the Board class to check the board's ability to receive a word at a specific location and orientation. This feature ensures that in the horizontal orientation the words fit correctly on the board based on their length.

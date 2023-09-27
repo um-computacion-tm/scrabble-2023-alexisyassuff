@@ -9,31 +9,37 @@ class Board:
         ]
         self.is_empty = True  # Inicializa el tablero como vacío
 
-    def validate_word_inside_board(self, word, location, orientation):
-        row, col = location
-
-    def validate_word_inside_board(self, word, location: tuple, orientation):
+    def validate_word_inside_board(self, word, location: tuple , orientation):
+        #Define cual indice de tupla es fila y columna   [f,c]
         horizontal_position = location[0]
-        vertical_position = location[1]
+        col = location[1]
         len_word = len(word)
         orientation = orientation.upper()
       
         if orientation == "V":
-            if vertical_position + len_word > 15:
+            if  col + len_word > 15:
                 return False
             elif horizontal_position + len_word > 1:
                 return True 
         elif orientation == "H":
             if horizontal_position + len_word > 15:
                 return False
-            elif vertical_position + len_word > 1:
+            elif    col + len_word > 1:
                 return True 
         
     def validate_word_out_of_board(self, word, location, orientation):
         return not self.validate_word_inside_board(word, location, orientation)
      
-    def add_letter(self, letter, location):
-        row, col = location
-        self.grid[row][col].add_letter(letter)
-        self.is_empty = False  
+  
+    def validate_word_place_board(self, word, location: tuple, orientation):
+        len_word = len(word)
+        row = location[0]
+        col = location[1]
+        if orientation == "H":
+            return len_word +  col <= 14
+        if orientation == "H":
+            return len_word +  col > 14
+
+    
+    
     
