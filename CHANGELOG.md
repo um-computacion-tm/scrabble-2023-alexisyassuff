@@ -95,7 +95,15 @@ Added a function, validate_word_place_board, to the Board class to check the boa
 ### Added
 - Added a method that checks the next turn when the game starts. This is done by defining the following shift variable within the __init__ constructor.
 
-## [04-10-2023] 10hs
+## [04-10-2023]
 
 ### Added
 - Added tests that will verify that the word is available in the dictionary of the Royal Spanish Academy
+
+## [05-10-2023] 13hs
+
+### Added
+- Added respective methods to the test_diccionary.py file that will verify the existence of the word in the RAE
+
+Name: Alexis Yassuff
+Id: 62072
