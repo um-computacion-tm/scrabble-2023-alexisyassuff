@@ -87,6 +87,7 @@ class TestBoard(unittest.TestCase):
         orientation = "H"
         word_is_valid = board.validate_word_place_board(word, location, orientation)
         assert word_is_valid == True
+    
 
 if __name__ == '__main__':
     unittest.main()

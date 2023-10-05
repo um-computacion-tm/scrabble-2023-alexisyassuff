@@ -8,6 +8,7 @@ class Board:
             for _ in range(15)
         ]
         self.is_empty = True
+        
     def validate_word_inside_board(self, word, location: tuple , orientation):
         #Define cual indice de tupla es fila y columna   [f,c]
         horizontal_position = location[0]
