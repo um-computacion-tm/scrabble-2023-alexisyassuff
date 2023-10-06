@@ -30,11 +30,11 @@ class Board:
     def validate_word_out_of_board(self, word, location, orientation):
         return not self.validate_word_inside_board(word, location, orientation)
     
-    # def is_empty(self):
-    #     if self.grid[7][7].letter == None:
-    #         return True  
-    #     else:
-    #         return False
+    def is_empty(self):
+        if self.grid[7][7].letter == None:
+            return True  
+        else:
+            return False
             
     def validate_word_place_board(self, word, location: tuple, orientation):
         len_word = len(word)
@@ -48,7 +48,3 @@ class Board:
            return len_word + row <= 14
         if orientation == "V":
            return len_word + row > 14
-
-    
-    
-    

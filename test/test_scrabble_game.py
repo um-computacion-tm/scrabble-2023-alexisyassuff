@@ -30,8 +30,11 @@ class TestScrabbleGame(unittest.TestCase):
             scrabble_game.current_player = scrabble_game.players[2]
             scrabble_game.next_turn()
             assert scrabble_game.current_player == scrabble_game.players[0]
-            
-
+    
+    # def test_player_has_letter(self):
+    #         scrabble_game = ScrabbleGame()
+    #         self.tiles
+    #         self.assertEquals
 
 if __name__ == '__main__':
     unittest.main()

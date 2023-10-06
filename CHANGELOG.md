@@ -105,5 +105,11 @@ Added a function, validate_word_place_board, to the Board class to check the boa
 ### Added
 - Added respective methods to the test_diccionary.py file that will verify the existence of the word in the RAE
 
+## [06-10-2023] 13hs
+
+### Added
+- The validate_word function was added to the scrabble.py file where it is verified that the user has in his hand the pieces corresponding to the word he wants to enter, also that the word fits on the board and also that it exists in the dictionary.
+
+
 Name: Alexis Yassuff
 Id: 62072

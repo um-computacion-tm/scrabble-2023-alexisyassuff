@@ -1,6 +1,7 @@
 from game.board import Board
 from game.player import Player
 from game.models import BagTiles
+from game.dictionary import validate_word
 
 
 class ScrabbleGame:
@@ -22,20 +23,24 @@ class ScrabbleGame:
             else:
                 self.current_player = self.players[turn + 1]
                 
+    #     1- Validar que usuario tiene esas letras
+    #     2- Validar que la palabra entra en el tablero
     def validate_word(self, word, location, orientation):
-        '''
-        1- Validar que usuario tiene esas letras
-        2- Validar que la palabra entra en el tablero
-        '''
-        self.board.validate_word_inside_board(word, location, orientation)
+        self.verify_tiles_in_hand(word)
+        self.validate_word_inside_board(word, location, orientation)
+        self.validate_word(word)
+        ##Atrapar 
+
     
-    def get_words():
-        '''
-        Obtener las posibles palabras que se pueden formar, dada una palabra, ubicacion y orientacion 
-        Preguntar al usuario, por cada una de esas palabras, las que considera reales
-        '''
+    # def get_words():
+    #     '''
+    #     Obtener las posibles palabras que se pueden formar, dada una palabra, ubicacion y orientacion 
+    #     Preguntar al usuario, por cada una de esas palabras, las que considera reales
+    #     '''
     
-    def put_words():
-        '''
-        Modifica el estado del tablero con las palabras consideradas como correctas
-        '''
+    # def put_words():
+    #     def make_play(self, word):
+
+    #     '''
+    #     Modifica el estado del tablero con las palabras consideradas como correctas
+    #     ''    

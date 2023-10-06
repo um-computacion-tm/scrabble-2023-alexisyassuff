@@ -1,6 +1,7 @@
 import unittest
 from game.player import Player
 from game.models import Tile, BagTiles
+from game.scrabble import ScrabbleGame
 
 class TestPlayer(unittest.TestCase): #Objetivo revisar que usuario comience con cero fichas
     def test_init(self):
@@ -12,7 +13,7 @@ class TestPlayer(unittest.TestCase): #Objetivo revisar que usuario comience con 
     
         """_summary_
         """     
-    def test_make_play_valid_word(self): #Objetivo camino palabra ingresada correctamente
+    def test_make_play_user_has_letter(self): #Objetivo camino palabra ingresada correctamente
         player_1 = Player()
         player_1.tiles = ["h", "o", "l", "a", "b", "j"] #Fichas jugador 
         word = player_1.make_play("hola")  #Llamado a funcion con word = hola
@@ -21,7 +22,7 @@ class TestPlayer(unittest.TestCase): #Objetivo revisar que usuario comience con 
         )
         self.assertEqual(len(player_1.tiles), 2) #Se restan 4 fichas "hola" a 6 fichas 
     
-    def test_make_play_not_valid_word(self): #Camino no valido 
+    def test_make_play_user_has_not_letter(self): #Camino no valido 
         player_1 = Player()
         player_1.tiles = ["h", "o", "l", "a", "b", "j"] 
         word = player_1.make_play("hacer")  #Cuando alguna letra no es en sus fichas retorna None
@@ -41,50 +42,15 @@ class TestPlayer(unittest.TestCase): #Objetivo revisar que usuario comience con 
         tiles = player_1.take_tiles_from_bagtiles(["m", "n", "c"])
         self.assertEqual(player_1.tiles, ["h", "o", "l", "a", "b", "j", "m", "n", "c"] )
         self.assertEqual(len(player_1.tiles), 9)
-        
-    # def test_validate_user_has_letters(self):
-    #     bag_tile = BagTiles()
-    #     bag_tile.tiles = [
-    #         Tile(letter='H', value=1),
-    #         Tile(letter='O', value=1),
-    #         Tile(letter='L', value=1),
-    #         Tile(letter='A', value=1),
-    #         Tile(letter='C', value=1),
-    #         Tile(letter='U', value=1),
-    #         Tile(letter='M', value=1),
-    #     ]
-    #     player = Player(bag_tile)
-    #     tiles = [
-    #         Tile(letter='H', value=1),
-    #         Tile(letter='O', value=1),
-    #         Tile(letter='L', value=1),
-    #         Tile(letter='A', value=1),
-    #     ]
-
-    #     is_valid = player.has_letters(tiles)
-
-    #     self.assertEqual(is_valid, True)
-
-    # def test_validate_fail_when_user_has_not_letters(self):
-    #         bag_tile = BagTiles()
-    #         bag_tile.tiles = [
-    #         Tile(letter='P', value=1),
-    #         Tile(letter='O', value=1),
-    #         Tile(letter='L', value=1),
-    #         Tile(letter='A', value=1),
-    #         Tile(letter='C', value=1),
-    #         Tile(letter='U', value=1),
-    #         Tile(letter='M', value=1),
-    #     ]
-    #         player = Player(bag_tile)
-    #         tiles = [
-    #         Tile(letter='H', value=1),
-    #         Tile(letter='O', value=1),
-    #         Tile(letter='L', value=1),
-    #         Tile(letter='A', value=1),
-    #     ]
-    #         is_valid = player.has_letters(tiles)
-    #         self.assertEqual(is_valid, False)
+    
+       
+    def test_point_from_calculation(self):
+        scrabble_game = ScrabbleGame(players_count = 3)
+        bag_tiles = BagTiles()
+        scrabble_game.current_player = Player(1, bag_tiles)
+        scrabble_game.current_player.tiles = [Tile("C", 1), Tile("A", 1), Tile("S", 2), Tile("A", 1)]
+        scrabble_game.calculate_word_value("CASA", (7,7), "V")
+        self.assertEqual(scrabble_game.current_player.points, 5,)
 
 if __name__ == '__main__':
     unittest.main()
