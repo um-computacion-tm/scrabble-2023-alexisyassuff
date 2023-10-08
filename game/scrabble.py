@@ -2,6 +2,7 @@ from game.board import Board
 from game.player import Player
 from game.models import BagTiles
 from game.dictionary import validate_word
+from calculate_word import WordCalculator
 
 
 class ScrabbleGame:
@@ -31,7 +32,9 @@ class ScrabbleGame:
         self.validate_word(word)
         ##Atrapar 
 
-    
+    def calculate_points(self, word ):
+        self.points_player = self.calculate_word_value(word) 
+        
     # def get_words():
     #     '''
     #     Obtener las posibles palabras que se pueden formar, dada una palabra, ubicacion y orientacion 

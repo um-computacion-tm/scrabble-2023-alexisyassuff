@@ -10,6 +10,7 @@ class TestPlayer(unittest.TestCase): #Objetivo revisar que usuario comience con 
             len(player_1.tiles),
             0,
         )
+        self.assertEqual(self.points_player, 0)
     
         """_summary_
         """     
@@ -51,6 +52,8 @@ class TestPlayer(unittest.TestCase): #Objetivo revisar que usuario comience con 
         scrabble_game.current_player.tiles = [Tile("C", 1), Tile("A", 1), Tile("S", 2), Tile("A", 1)]
         scrabble_game.calculate_word_value("CASA", (7,7), "V")
         self.assertEqual(scrabble_game.current_player.points, 5,)
+    
+
 
 if __name__ == '__main__':
     unittest.main()

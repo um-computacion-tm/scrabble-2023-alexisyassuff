@@ -35,6 +35,8 @@ class TestScrabbleGame(unittest.TestCase):
     #         scrabble_game = ScrabbleGame()
     #         self.tiles
     #         self.assertEquals
+    
+    
 
 if __name__ == '__main__':
     unittest.main()

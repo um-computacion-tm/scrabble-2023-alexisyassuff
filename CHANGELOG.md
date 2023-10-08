@@ -100,15 +100,20 @@ Added a function, validate_word_place_board, to the Board class to check the boa
 ### Added
 - Added tests that will verify that the word is available in the dictionary of the Royal Spanish Academy
 
-## [05-10-2023] 13hs
+## [05-10-2023] 
 
 ### Added
 - Added respective methods to the test_diccionary.py file that will verify the existence of the word in the RAE
 
-## [06-10-2023] 13hs
+## [06-10-2023] 
 
 ### Added
 - The validate_word function was added to the scrabble.py file where it is verified that the user has in his hand the pieces corresponding to the word he wants to enter, also that the word fits on the board and also that it exists in the dictionary.
+
+## [07-10-2023] 
+
+### Added
+- Added a method in the scrabble.py file that calls the function that calculates the word score in calculate_word.py. The objective of this is that the value taken by the function that calculates this word is equal to the score of the player who won them.
 
 
 Name: Alexis Yassuff

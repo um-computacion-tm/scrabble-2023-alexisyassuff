@@ -1,6 +1,7 @@
 class Player:
     def __init__(self):
         self.tiles = []
+        points_player = 0
 
     def make_play(self, word):
         if self.verify_tiles_in_hand(word):
@@ -38,3 +39,5 @@ class Player:
 
     def take_tiles_from_bagtiles(self, tiles): #Funcion que se habilita cuando el jugador tome fichas de la bolsa
         self.tiles.extend(tiles)
+
+    
