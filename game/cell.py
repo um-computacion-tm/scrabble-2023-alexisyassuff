@@ -14,5 +14,10 @@ class Cell:
         else:
             return self.letter.value
         
-        
-
+    def __repr__(self):
+        if self.tile:
+            return repr(self.tile)
+        if self.multiplier > 1:
+            return f'{"W" if self.multiplier_type == "word" else "L"}x{self.multiplier}'
+        else:
+            return 

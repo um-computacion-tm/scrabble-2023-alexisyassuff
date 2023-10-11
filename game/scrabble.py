@@ -2,7 +2,7 @@ from game.board import Board
 from game.player import Player
 from game.models import BagTiles
 from game.dictionary import validate_word
-from calculate_word import WordCalculator
+from game.calculate_word import WordCalculator
 
 
 class ScrabbleGame:
@@ -33,17 +33,19 @@ class ScrabbleGame:
         ##Atrapar 
 
     def calculate_points(self, word ):
-        self.points_player = self.calculate_word_value(word) 
+        self.points_player += self.calculate_word_value(word) 
         
-    # def get_words():
-    #     '''
-    #     Obtener las posibles palabras que se pueden formar, dada una palabra, ubicacion y orientacion 
-    #     Preguntar al usuario, por cada una de esas palabras, las que considera reales
-    #     '''
+    def get_words():
+        '''
+        Obtener las posibles palabras que se puede  ºn formar, dada una palabra, ubicacion y orientacion 
+        Preguntar al usuario, por cada una de esas palabras, las que considera reales
+        '''
     
-    # def put_words():
-    #     def make_play(self, word):
+    def put_words(self, word, orientacion): #Modificar tablero cuando palabra correcta
+        self,make_play(self, word)
+   
+    def calculate_word_value(self):
+        self.calculate_word_value
 
-    #     '''
-    #     Modifica el estado del tablero con las palabras consideradas como correctas
-    #     ''    
+        
+        

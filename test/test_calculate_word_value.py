@@ -68,7 +68,8 @@ class TestCalculateWordValue(unittest.TestCase):
                 multiplier_type='letter',
                 letter=Tile('C', 1)
             ),
-            Cell(letter=Tile('A', 1)),
+            Cell(
+                letter=Tile('A', 1)),
             Cell(
                 letter=Tile('S', 2),
                 multiplier=2,
@@ -77,7 +78,7 @@ class TestCalculateWordValue(unittest.TestCase):
             Cell(letter=Tile('A', 1)),
         ]
         value = WordCalculator.calculate_word_value(word)
-        self.assertEqual(value, 5)
+        self.assertEqual(value, 14)
  
 
 if __name__ == '__main__':

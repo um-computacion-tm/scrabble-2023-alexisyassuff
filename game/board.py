@@ -30,7 +30,8 @@ class Board:
     def validate_word_out_of_board(self, word, location, orientation):
         return not self.validate_word_inside_board(word, location, orientation)
     
-    def is_empty(self):
+    def  board_is_empty(self):
+        # import ipdb; ipdb.set_trace()
         if self.grid[7][7].letter == None:
             return True  
         else:

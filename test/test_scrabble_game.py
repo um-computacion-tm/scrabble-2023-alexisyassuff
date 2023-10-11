@@ -32,9 +32,9 @@ class TestScrabbleGame(unittest.TestCase):
             assert scrabble_game.current_player == scrabble_game.players[0]
     
     # def test_player_has_letter(self):
-    #         scrabble_game = ScrabbleGame()
-    #         self.tiles
-    #         self.assertEquals
+    #         scrabble_game = ScrabbleGame(2)
+    #         # self.tiles
+    #         # self.assertEquals
     
     
 
