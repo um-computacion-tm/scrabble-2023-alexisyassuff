@@ -1,7 +1,7 @@
 class Player:
     def __init__(self):
         self.tiles = []
-        points_player = 0
+        self.points_player = 0
 
     def make_play(self, word):
         if self.verify_tiles_in_hand(word):

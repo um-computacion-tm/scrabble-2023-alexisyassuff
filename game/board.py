@@ -7,7 +7,6 @@ class Board:
             [ Cell(1, '') for _ in range(15) ]
             for _ in range(15)
         ]
-        self.is_empty = True
         
     def validate_word_inside_board(self, word, location: tuple , orientation):
         #Define cual indice de tupla es fila y columna   [f,c]
@@ -33,6 +32,7 @@ class Board:
     def  board_is_empty(self):
         # import ipdb; ipdb.set_trace()
         if self.grid[7][7].letter == None:
+            print("a", self.grid[7][7].letter )
             return True  
         else:
             return False

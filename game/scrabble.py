@@ -9,6 +9,7 @@ class ScrabbleGame:
     def __init__(self, players_count):
         self.board = Board()
         self.bag_tiles = BagTiles()
+        self.word_calculator = WordCalculator()
         self.players = []
         for _ in range(players_count):
             self.players.append(Player())
@@ -42,10 +43,8 @@ class ScrabbleGame:
         '''
     
     def put_words(self, word, orientacion): #Modificar tablero cuando palabra correcta
-        self,make_play(self, word)
+        self.make_play(self, word)
    
-    def calculate_word_value(self):
-        self.calculate_word_value
-
-        
+    def calculate_word_value(self , word, location, orientation):
+        self.word_calculator.calculate_word_value(word, location, orientation)        
         

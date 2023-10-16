@@ -37,6 +37,7 @@ class TestBoard(unittest.TestCase):
             
     def test_board_is_empty(self):
         board = Board()
+        print(board.board_is_empty() )
         assert board.board_is_empty()  == True
 
     def test_board_is_not_empty(self):

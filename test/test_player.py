@@ -11,7 +11,7 @@ class TestPlayer(unittest.TestCase): #Objetivo revisar que usuario comience con 
             len(player_1.tiles),
             0,
         )
-        self.assertEqual(self.points_player, 0)
+        self.assertEqual(player_1.points_player, 0)
     
         """_summary_
         """     
