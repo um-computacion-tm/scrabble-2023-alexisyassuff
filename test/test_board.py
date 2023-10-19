@@ -88,8 +88,18 @@ class TestBoard(unittest.TestCase):
         orientation = "H"
         word_is_valid = board.validate_word_place_board(word, location, orientation)
         assert word_is_valid == True
-    
+        
+    def test_set_multiplier(self):
+        board = Board()
+        row, col = 7, 7
+        multiplier = 2  
+        multiplier_type = 'letter'  
 
+        board.add_multiplier(self, row, col, multiplier, multiplier_type)
+
+        cell = board.grid[row][col]
+        self.assertEqual(cell.multiplier, multiplier)
+        self.assertEqual(cell.multiplier_type, multiplier_type)
 
 if __name__ == '__main__':
     unittest.main()

@@ -115,19 +115,27 @@ Added a function, validate_word_place_board, to the Board class to check the boa
 ### Added
 - Added a method in the scrabble.py file that calls the function that calculates the word score in calculate_word.py. The objective of this is that the value taken by the function that calculates this word is equal to the score of the player who won them.
 
-## [10-10-2023]  
+## [10-10-2023]
 
+### Added
 Added the show_board function to display the current state of the board.
 This function prints a visual representation of the Scrabble board in the console.
 It makes it easier to visualize the arrangement of tiles on the board during the game.
 
-## [11-10-2023] 13hs 
+## [11-10-2023] 13hs
 
+### Added
 General bug fixes containing more than 7 bugs and errors. Updated Changelog.md and attempted a method in scrabble.py to check the board word addition unit test when the user enters the correct one.
 
 ## [16-10-2023]  
+
+### Added
 Error corrections that enable you to have fewer flaws when running the program
 
+## [19-10-2023]
+
+### Added
+Added unittest which will check the add_multiplier function, with the aim of proposing a scenario where in a certain position at the start of the scrabble game there are multipliers in the corresponding cells.
 
 Name: Alexis Yassuff
 Id: 62072

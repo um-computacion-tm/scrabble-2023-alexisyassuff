@@ -49,6 +49,10 @@ class Board:
            return len_word + row <= 14
         if orientation == "V":
            return len_word + row > 14
+    
+    def add_multiplier(self, row, col, multiplier, multiplier_type):
+        pass
+        # for i in self.grid
        
     def show_board(board):
         print('\n  |' + ''.join([f' {str(row_index).rjust(2)} ' for row_index in range(15)]))
