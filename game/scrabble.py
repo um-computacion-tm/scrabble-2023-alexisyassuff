@@ -47,4 +47,5 @@ class ScrabbleGame:
    
     def calculate_word_value(self , word, location, orientation):
         self.word_calculator.calculate_word_value(word, location, orientation)        
-        
+        #Aca debo corregir la funcion en calculate_value para que contenga los
+        #Parametros correspondientes

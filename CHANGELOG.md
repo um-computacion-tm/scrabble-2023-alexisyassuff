@@ -137,5 +137,10 @@ Error corrections that enable you to have fewer flaws when running the program
 ### Added
 Added unittest which will check the add_multiplier function, with the aim of proposing a scenario where in a certain position at the start of the scrabble game there are multipliers in the corresponding cells.
 
+## [20-10-2023]
+
+### Added
+In the init constructor of board.py, the function called add_multiplier was added since it is desired that as soon as the game starts the board already has the corresponding multipliers in its cell. In said add_ function, multiplier, what was done was to place in lists the coordinates of the cells where these multipliers will be, with their type of multiplication and their numerical value. In the next commit they will be traversed with the objective of adding the multiplier to the correct cell
+
 Name: Alexis Yassuff
 Id: 62072

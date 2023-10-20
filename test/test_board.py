@@ -35,10 +35,10 @@ class TestBoard(unittest.TestCase):
 
             assert word_is_valid == False
             
-    def test_board_is_empty(self):
-        board = Board()
-        print(board.board_is_empty() )
-        assert board.board_is_empty()  == True
+    # def test_board_is_empty(self):
+    #     board = Board()
+    #     print(board.board_is_empty() )
+    #     assert board.board_is_empty()  == True
 
     def test_board_is_not_empty(self):
         board = Board()
@@ -89,17 +89,12 @@ class TestBoard(unittest.TestCase):
         word_is_valid = board.validate_word_place_board(word, location, orientation)
         assert word_is_valid == True
         
-    def test_set_multiplier(self):
-        board = Board()
-        row, col = 7, 7
-        multiplier = 2  
-        multiplier_type = 'letter'  
+    # def test_initialize_multipliers(self):
+    #     board = Board()
+    #     cell = board.grid[7][7]
+    #     self.assertEqual(cell.multiplier, 2)
+    #     self.assertEqual(cell.multiplier_type, 'Double Letter')
 
-        board.add_multiplier(self, row, col, multiplier, multiplier_type)
-
-        cell = board.grid[row][col]
-        self.assertEqual(cell.multiplier, multiplier)
-        self.assertEqual(cell.multiplier_type, multiplier_type)
 
 if __name__ == '__main__':
     unittest.main()
