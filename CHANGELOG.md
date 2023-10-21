@@ -142,5 +142,11 @@ Added unittest which will check the add_multiplier function, with the aim of pro
 ### Added
 In the init constructor of board.py, the function called add_multiplier was added since it is desired that as soon as the game starts the board already has the corresponding multipliers in its cell. In said add_ function, multiplier, what was done was to place in lists the coordinates of the cells where these multipliers will be, with their type of multiplication and their numerical value. In the next commit they will be traversed with the objective of adding the multiplier to the correct cell
 
+
+## [21-10-2023]
+
+### Added
+The method was added to the add_multiplier function where the cells are traversed to locate the multiplicities in the previously defined coordinate.
+
 Name: Alexis Yassuff
 Id: 62072

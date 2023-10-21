@@ -89,11 +89,11 @@ class TestBoard(unittest.TestCase):
         word_is_valid = board.validate_word_place_board(word, location, orientation)
         assert word_is_valid == True
         
-    # def test_initialize_multipliers(self):
-    #     board = Board()
-    #     cell = board.grid[7][7]
-    #     self.assertEqual(cell.multiplier, 2)
-    #     self.assertEqual(cell.multiplier_type, 'Double Letter')
+    def test_initialize_multipliers(self):
+        board = Board()
+        cell = board.grid[7][7]
+        self.assertEqual(cell.multiplier, 2)
+        self.assertEqual(cell.multiplier_type, 'Double Letter')
 
 
 if __name__ == '__main__':

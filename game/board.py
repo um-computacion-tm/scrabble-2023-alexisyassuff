@@ -14,7 +14,20 @@ class Board:
         triple_letter_cells = [(6, 2), (10, 2), (2, 6), (6, 6), (10, 6), (14, 6), (1, 8), (5, 8), (9, 8), (13, 8), (2, 10), (6, 10), (10, 10), (14, 10), (6, 14), (10, 14)]
         double_word_cells = [(1, 1), (8, 1), (15, 1), (2, 2), (14, 2), (3, 3), (13, 3), (4, 4), (12, 4), (7, 7), (11, 7), (4, 12), (12, 12), (1, 15), (8, 15), (15, 15)]
         triple_word_cells = [(0, 0), (7, 0), (14, 0), (0, 7), (14, 7), (0, 14), (7, 14), (14, 14)]
-
+        for row in range(15):
+            for col in range(15):
+                if (row, col) in double_letter_cells:
+                    self.grid[row][col].multiplier = 2
+                    self.grid[row][col].multiplier_type = 'Double Letter'
+                elif (row, col) in triple_letter_cells:
+                    self.grid[row][col].multiplier = 3
+                    self.grid[row][col].multiplier_type = 'Triple Letter'
+                elif (row, col) in double_word_cells:
+                    self.grid[row][col].multiplier = 2
+                    self.grid[row][col].multiplier_type = 'Doble Word'
+                elif (row, col) in triple_word_cells:
+                    self.grid[row][col].multiplier = 3
+                    self.grid[row][col].multiplier_type = 'Trible Word'
       
         
     def validate_word_inside_board(self, word, location: tuple , orientation):
