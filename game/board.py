@@ -4,7 +4,7 @@ from game.cell import Cell
 class Board:
     def __init__(self):
         self.grid = [
-            [ Cell(1, '') for _ in range(15) ]
+            [Cell() for _ in range(15)]
             for _ in range(15)
         ]
         self.initialize_multipliers()  # Llama a la función para inicializar los multiplicadores

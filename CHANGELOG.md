@@ -148,5 +148,11 @@ In the init constructor of board.py, the function called add_multiplier was adde
 ### Added
 The method was added to the add_multiplier function where the cells are traversed to locate the multiplicities in the previously defined coordinate.
 
+
+## [22-10-2023]
+
+### Added
+Bug fix to make the test_board_is_empty unit test work, which verifies that the board is empty at the start of the game. The game will always start with a word in the middle, so if the coordinate position (7,7) is empty: the game has not started yet. The solution was that in the board previously the init constructor began to traverse it from position 1 and not from zero
+
 Name: Alexis Yassuff
 Id: 62072
