@@ -1,5 +1,7 @@
 from game.scrabble import ScrabbleGame
-
+from game.models import  Tile, BagTiles
+from game.cell import Cell
+from game.board import Board
 
 def main():
     print("Bienvenido!")
@@ -15,7 +17,7 @@ def main():
     print("Cantidad de jugadores: ",len(scrabble_game.players))
     scrabble_game.next_turn()
     #TODO while playing: loop por turno de jugador hasta que termine el juego
-    print(f"Turno del jugador {scrabble_game.current_player.id}")
+    print(f"Turno del jugador {scrabble_game.current_player}")
     word = input("Ingrese palabra: ")
     location_x = input("Ingrese posicion X: ")
     location_y = input("Ingrese posicion Y: ")

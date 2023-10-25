@@ -24,10 +24,10 @@ class Board:
                     self.grid[row][col].multiplier_type = 'Triple Letter'
                 elif (row, col) in double_word_cells:
                     self.grid[row][col].multiplier = 2
-                    self.grid[row][col].multiplier_type = 'Doble Word'
+                    self.grid[row][col].multiplier_type = 'Double Word'
                 elif (row, col) in triple_word_cells:
                     self.grid[row][col].multiplier = 3
-                    self.grid[row][col].multiplier_type = 'Trible Word'
+                    self.grid[row][col].multiplier_type = 'Triple Word'
       
         
     def validate_word_inside_board(self, word, location: tuple , orientation):

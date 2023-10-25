@@ -43,13 +43,9 @@ class TestCalculateWordValue(unittest.TestCase):
         value = WordCalculator.calculate_word_value(word)
         self.assertEqual(value, 10)
 
-    def test_with_letter_word_multiplier(self):
+    def test_with_double_word_multiplier(self):
         word = [
-            Cell(
-                multiplier=3,
-                multiplier_type='letter',
-                letter=Tile('C', 1)
-            ),
+            Cell(letter=Tile('C', 1)),
             Cell(letter=Tile('A', 1)),
             Cell(
                 letter=Tile('S', 2),
@@ -59,7 +55,22 @@ class TestCalculateWordValue(unittest.TestCase):
             Cell(letter=Tile('A', 1)),
         ]
         value = WordCalculator.calculate_word_value(word)
-        self.assertEqual(value, 14)
+        self.assertEqual(value, 10)
+    
+    def test_with_triple_word_multiplier(self):
+       word = [
+            Cell(
+                multiplier=3,
+                multiplier_type='word',
+                letter=Tile('C', 1)
+            ),
+            Cell(letter=Tile('A', 1)),
+            Cell(
+                letter=Tile('S', 2),),
+            Cell(letter=Tile('A', 1)),
+        ]
+       value= WordCalculator.calculate_word_value(word)
+       self.assertEqual(value, 15)
 
     def test_with_letter_word_multiplier_no_active(self):
         word = [

@@ -154,5 +154,11 @@ The method was added to the add_multiplier function where the cells are traverse
 ### Added
 Bug fix to make the test_board_is_empty unit test work, which verifies that the board is empty at the start of the game. The game will always start with a word in the middle, so if the coordinate position (7,7) is empty: the game has not started yet. The solution was that in the board previously the init constructor began to traverse it from position 1 and not from zero
 
+
+## [25-10-2023]
+
+### Added
+Added a fix to the unit test to check letter and word multiplier scenarios (doubles and triples) separately to avoid potential conflicts in calculate_word_value.py
+
 Name: Alexis Yassuff
 Id: 62072
